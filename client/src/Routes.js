@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Testimonios from './components/pages/Testimonio';
 import CreateAccountContainer from './components/CreateAccountContainer';
 import SignInContainer  from './components/SignInContainer';
+import ContactContainer from './components/ContactContainer';
 
 
 function AppRoutes() {
@@ -11,6 +12,7 @@ function AppRoutes() {
       <Route path='/' element={<Testimonios />} />
       <Route path='/signup' element={<CreateAccountContainer />} />
       <Route path='/signIn' element={<SignInContainer />} />
+      <Route path='/contact' element={<ContactContainer />} />
       {/* <Route path='*' element={<NotFound />} /> */} 
 
     </Routes>
