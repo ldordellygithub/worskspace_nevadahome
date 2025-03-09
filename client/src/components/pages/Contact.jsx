@@ -1,11 +1,8 @@
-/*dependecia  necesarias*/
-
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "../assets/styles/Contact.css";
 
-function Contact() {
+const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -29,11 +26,9 @@ function Contact() {
     e.preventDefault();
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length === 0) {
-      // Lógica para enviar el formulario
       try {
-        // Aquí puedes agregar la lógica para enviar el formulario a tu backend
         alert('Formulario enviado con éxito');
-        navigate('/'); // Redirigir a la página de inicio después de enviar el formulario
+        navigate('/');
       } catch (error) {
         alert('Error al enviar el formulario');
       }
@@ -41,52 +36,65 @@ function Contact() {
       setErrors(validationErrors);
     }
   };
+  
+  //  contenedor  de  contacto y  formulario
 
   return (
-    <div className="contact-form-container">
-
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="name">Nombre</label>
-          <input
-            type="text"
-            id="name"
-            value={formData.name}
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
-          {errors.name && <p className="error">{errors.name}</p>}
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Correo Electrónico</label>
-          <input
-            type="email"
-            id="email"
-            value={formData.email}
-            onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
-          {errors.email && <p className="error">{errors.email}</p>}
-        </div>
-        <div className="form-group">
-          <label htmlFor="subject">Asunto</label>
-          <input
-            type="text"
-            id="subject"
-            value={formData.subject}
-            onChange={(e) => setFormData({ ...formData, subject: e.target.value })} />
-          {errors.subject && <p className="error">{errors.subject}</p>}
-        </div>
-        <div className="form-group">
-          <label htmlFor="message">Mensaje</label>
-          <textarea
-            id="message"
-            value={formData.message}
-            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-          ></textarea>
-          {errors.message && <p className="error">{errors.message}</p>}
-        </div>
-        <button type="submit">Enviar</button>
-      </form>
+    <div className="contact-page">
+      <div className="contact-info">
+        <h1>Contact</h1>
+        <p> Nuestro  Equipo de Sastifacion  al  cliente.!</p>
+        <p>Estara  para  ti   las  24 horas  del  dia <span> Escribeno.!!</span></p>
+        <p className='wassapth'> +19598665023</p>
+        <p>Email: mundonevadaenergy@gmail.com</p>
+      </div>
+  
+      <div className="contact-form-container">  
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              value={formData.name}
+              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+            />
+            {errors.name && <p className="error">{errors.name}</p>}
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              value={formData.email}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            />
+            {errors.email && <p className="error">{errors.email}</p>}
+          </div>
+          <div className="form-group">
+            <label htmlFor="subject">Subject</label>
+            <input
+              type="text"
+              id="subject"
+              value={formData.subject}
+              onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+            />
+            {errors.subject && <p className="error">{errors.subject}</p>}
+          </div>
+          <div className="form-group">
+            <label htmlFor="message">Message</label>
+            <textarea
+              id="message"
+              value={formData.message}
+              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+            ></textarea>
+            {errors.message && <p className="error">{errors.message}</p>}
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </div>
   );
-}
+};
 
 export default Contact;
-

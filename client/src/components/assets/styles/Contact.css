@@ -5,31 +5,52 @@ body {
   padding: 0;
 }
 
-/* Contenedor principal */
-.contact-form-container {
+/* Contenedor principal de la página de contacto */
+.contact-page {
   display: flex;
-  flex-direction: column; /* Mueve el título y el formulario */
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Información de contacto */
+.contact-info {
+  flex: 1;
   padding: 20px;
+  margin-right: 40px;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden; /* Asegura que el contenido se mantenga dentro del contenedor */
 }
 
-/* Título del formulario */
-.contact-title {
-  font-size: 2rem;
+.contact-info h1 {
+  font-size: 2.5rem;
   color: #ff6347;
   margin-bottom: 20px;
 }
 
+.contact-info p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Contenedor del formulario */
+.contact-form-container {
+  flex: 2;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 /* Estilos del formulario */
 form {
-  width: 100%;
-  max-width: 600px; /* Ancho máximo */
   display: flex;
   flex-direction: column;
 }
@@ -51,13 +72,14 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
-  box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+  box-sizing: border-box;
 }
 
 textarea {
-  min-height: 100px; /* Ajusta la altura mínima del textarea */
-  max-height: 300px; /* Ajusta la altura máxima del textarea */
-  overflow-y: auto; /* Añade un scroll vertical si el contenido excede la altura */
+  min-height: 100px;
+  resize: vertical;
+  max-height: 300px;
+  overflow-y: auto;
 }
 
 button {
@@ -68,10 +90,9 @@ button {
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
-  transition: background-color 0.3s ease; /* Transición para el hover */
+  transition: background-color 0.3s ease;
 }
 
-/* Estilos para el hover del botón */
 button:hover {
   background-color: #0056b3;
 }

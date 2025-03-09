@@ -4,7 +4,6 @@ import Contact from "./pages/Contact";
 const ContactContainer = () => {
     return (
         <div className="contact-form-container">
-            <h1  className="contact-title">Contacto</h1>
             <Contact />
         </div>
     );
