@@ -77,23 +77,24 @@
   }
   
   .search-input {
-    padding: 0.4rem 1rem;
+    padding: 0.5rem 1rem;
     border: none;
-    border-radius: 15px;
-    width: 200px;
-    font-size: 0.9rem;
+    border-radius: 11px;
+    width: 210px;
+    font-size: 1.0rem;
+    margin-top: -1px 
   }
   
   .search-button {
     position: absolute;
-    right: 0.5rem;
-    top: 50%;
+    right: 0.2rem;
+    top: 48%;
     transform: translateY(-50%);
     background: none;
     border: none;
     color: #388190;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
   }
   
   /* Responsive */
