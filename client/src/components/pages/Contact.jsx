@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "../assets/styles/Contact.css";
 
-const Contact = () => {
+function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -52,8 +52,7 @@ const Contact = () => {
             type="text"
             id="name"
             value={formData.name}
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-          />
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
           {errors.name && <p className="error">{errors.name}</p>}
         </div>
         <div className="form-group">
@@ -62,8 +61,7 @@ const Contact = () => {
             type="email"
             id="email"
             value={formData.email}
-            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-          />
+            onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
           {errors.email && <p className="error">{errors.email}</p>}
         </div>
         <div className="form-group">
@@ -72,8 +70,7 @@ const Contact = () => {
             type="text"
             id="subject"
             value={formData.subject}
-            onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-          />
+            onChange={(e) => setFormData({ ...formData, subject: e.target.value })} />
           {errors.subject && <p className="error">{errors.subject}</p>}
         </div>
         <div className="form-group">
@@ -89,7 +86,7 @@ const Contact = () => {
       </form>
     </div>
   );
-};
+}
 
 export default Contact;
 
