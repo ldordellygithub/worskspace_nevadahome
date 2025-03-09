@@ -8,7 +8,7 @@ body {
 /* Contenedor principal */
 .contact-form-container {
   display: flex;
-  flex-direction: column; /*   con  este  mueves el título y el formulario */
+  flex-direction: column; /* Mueve el título y el formulario */
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -16,6 +16,7 @@ body {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Asegura que el contenido se mantenga dentro del contenedor */
 }
 
 /* Título del formulario */
@@ -28,7 +29,7 @@ body {
 /* Estilos del formulario */
 form {
   width: 100%;
-  max-width: 500px; /* Ancho máximo */
+  max-width: 600px; /* Ancho máximo */
   display: flex;
   flex-direction: column;
 }
@@ -55,7 +56,8 @@ textarea {
 
 textarea {
   min-height: 100px; /* Ajusta la altura mínima del textarea */
-  
+  max-height: 300px; /* Ajusta la altura máxima del textarea */
+  overflow-y: auto; /* Añade un scroll vertical si el contenido excede la altura */
 }
 
 button {
@@ -69,9 +71,7 @@ button {
   transition: background-color 0.3s ease; /* Transición para el hover */
 }
 
-
-/* Estilos para el hover del botón   para  hacerlo  dinamico */
-
+/* Estilos para el hover del botón */
 button:hover {
   background-color: #0056b3;
 }
