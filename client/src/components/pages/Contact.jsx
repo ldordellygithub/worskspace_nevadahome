@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "../assets/styles/Contact.css";
+import { FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -43,11 +44,15 @@ const Contact = () => {
     <div className="contact-page">
       <div className="contact-info">
         <h1>Contact</h1>
-        <p> Nuestro  Equipo de Sastifacion  al  cliente.!</p>
-        <p>Estara  para  ti   las  24 horas  del  dia <span> Escribeno.!!</span></p>
-        <p className='wassapth'> +19598665023</p>
-        <p>Email: mundonevadaenergy@gmail.com</p>
-      </div>
+        <p> Nuestro Gran Equipo de Satisfacción al cliente, cuenta con un personal altamente calificado para darle una mejor atención.</p>
+        <p>Estaremos disponibles para todos nuestros usuarios las 24 horas del dia <span> Escribenos.</span></p>
+        <p className='wassapth' style={{ color: 'green', marginRight: '8px' }}>
+          <i className="fab fa-whatsapp"></i> Whatsapp: +19598665023
+        </p>
+        <p><FaEnvelope style={{ color: '#D44638', marginRight: '8px' }} />Email: mundonevadaenergy@gmail.com</p>
+        <p><FaMapMarkerAlt style={{ color: 'red', marginRight: '8px' }} />Cr.24 #34-10 torre 3 local 202 Cali Colombia</p>
+        <img src='https://es.pngtree.com/freepng/professional-woman-customer-support-help-his-client-trough-mobile-phone-call-3d-vector-isometric-illustration_5314880.html' alt='Customersuport' />
+        </div>
   
       <div className="contact-form-container">  
         <form onSubmit={handleSubmit}>
