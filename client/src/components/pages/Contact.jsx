@@ -51,8 +51,7 @@ const Contact = () => {
         </p>
         <p><FaEnvelope style={{ color: '#D44638', marginRight: '8px' }} />Email: mundonevadaenergy@gmail.com</p>
         <p><FaMapMarkerAlt style={{ color: 'red', marginRight: '8px' }} />Cr.24 #34-10 torre 3 local 202 Cali Colombia</p>
-        <img src='https://es.pngtree.com/freepng/professional-woman-customer-support-help-his-client-trough-mobile-phone-call-3d-vector-isometric-illustration_5314880.html' alt='Customersuport' />
-        </div>
+      </div>
   
       <div className="contact-form-container">  
         <form onSubmit={handleSubmit}>
